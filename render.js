@@ -1,4 +1,4 @@
-// Draw everything
+// Draws frames
 var render = function () {
   // clear the canvas
   ctx.clear();
@@ -29,8 +29,9 @@ var render = function () {
   // Text options
   ctx.font = "36px Helvetica";
 
-  // Initial text
+  // Start text and paddle deactiviation
   if (!isGameStarted) {
     ctx.fillText("Hit That Space Bar Yo", 200, canvas.height / 2);
   }
+
 };

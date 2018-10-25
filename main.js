@@ -8,8 +8,10 @@ var main = function () {
 
   then = now;
 
-  //Refreshes to next frame
+  //Refresh to next frame
   requestAnimationFrame(main);
+
+
 };
 
 
@@ -18,3 +20,6 @@ var isGameStarted = false;
 var then = Date.now();
 reset();
 main();
+
+
+
