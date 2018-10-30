@@ -29,7 +29,7 @@ var render = function () {
   // Text options
   ctx.font = "36px Helvetica";
 
-  // Start text and paddle deactiviation
+  // Start text
   if (!isGameStarted) {
     ctx.fillText("Hit That Space Bar Yo", 200, canvas.height / 2);
   }

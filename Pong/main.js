@@ -21,5 +21,6 @@ var then = Date.now();
 reset();
 main();
 
-
+// Back Button
+ctx.fillText("Go Back", 200, canvas.height / 2);
 
