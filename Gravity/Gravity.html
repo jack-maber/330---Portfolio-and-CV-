@@ -1,20 +1,22 @@
 <html lang=en>
 <head>
     <meta charset=utf-8>
-    <title>Javascript gravity</title>
+    <title>Gravity Demo</title>
 </head>
 <body onload="init()">
 
 
     <script>
+        //Variables for the Canvas
         var canvas, ctx, container;
-         canvas = document.createElement( 'canvas' );
-          ctx = canvas.getContext("2d");
-    var ball;
-    var message = "gravity simulator";
+        canvas = document.createElement( 'canvas' );
+        ctx = canvas.getContext("2d");
+        //
+        var ball;
+        var message = "Gravity Demo";
 
     // Velocity x
-     var vx = 5.0;
+     var vx = -5.0;
     // Velocity y - randomly set
     var vy;
 
@@ -22,38 +24,34 @@
     var bounce = 0.7;
     var xFriction = 0.1;
 
+    //Sets up demo
     function init(){
        setupCanvas();
-      vy = (Math.random() * -15) + -5;
+      vy = (Math.random() * -15) + -5; //Sets the Y velocity randomly for more interesting results
         ball = {x:canvas.width / 2, y:100, radius:20, status: 0,   color:"red"};
 
-    }//end init method
+    }
 
     function draw() {
         ctx.clearRect(0,0,canvas.width, canvas.height);
-        //display some text
+        //Creates Title at the top of the screen
 	       ctx.fillStyle = "blue";
            ctx.font = "20px Arial";
-           ctx.fillText(message, 20,20);
+           ctx.fillText(message, 500,20);
 
-
-
-             //draw cirlce
+             //Draw ball
             ctx.beginPath();
             ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2, false);
             ctx.fillStyle = ball.color;
             ctx.fill();
             ctx.closePath();
-
         ballMovement();
-
     }
 
-    setInterval(draw, 1000/35);
+    //Sets refresh rate of draw function
+    setInterval(draw, 1000/60);
 
-
-
-
+    //Takes care of all of the ball movement
     function ballMovement(){
         ball.x += vx;
         ball.y += vy;
@@ -63,7 +61,6 @@
         if (ball.x + ball.radius > canvas.width || ball.x - ball.radius < 0){
             vx *= -1;
         }
-
           // Ball hits the floor
         if (ball.y + ball.radius > canvas.height){// ||
 
@@ -84,7 +81,7 @@
 
 
     }
-
+    //Sets friction for the ball
     function xF(){
              if(vx>0)
                  vx = vx - xFriction;
@@ -92,25 +89,15 @@
                  vx = vx + xFriction;
     }
 
-
-
-
-
-
-     function setupCanvas() {//setup canvas
-
-
+    //Sets up all of the canvas elements
+    function setupCanvas(){
 	container = document.createElement( 'div' );
 	container.className = "container";
-
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 	document.body.appendChild( container );
 	container.appendChild(canvas);
-
-	ctx.strokeStyle = "#ffffff";
-	ctx.lineWidth =2;
-}
+    }
 
     </script>
 </body>
