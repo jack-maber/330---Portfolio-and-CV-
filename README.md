@@ -10,6 +10,8 @@ Pong tutorial used - https://www.simonewebdesign.it/making-a-game-from-scratch-i
 
 Snake tutorial used - https://thecodingtrain.com/CodingChallenges/003-snake-game-p5.html
 
+Gravity tutorial used - https://www.youtube.com/watch?v=F9LUPoH400M&t=265s
+
 Soundboard Tutorial - https://www.youtube.com/watch?v=VlwSz2dXK_8&t=474s
 
 Alex Jones clips - https://www.soundboard.com/sb/DagothUrWelcomesYou
