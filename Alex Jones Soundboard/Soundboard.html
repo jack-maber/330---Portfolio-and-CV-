@@ -13,23 +13,40 @@
             background-attachment: fixed;
             background-size: cover;
         }
-        nav#nav1{ margin-top: 50px; }
-        nav#nav1 > a{ background:#B9E1FF; color:#000; padding:10px; text-decoration:none; border-radius:5px; font-family:"Arial Black", Gadget, sans-serif; }
+        nav#nav1{ margin-top: 500px; }
+            nav#nav1 > a {
+                background: #B9E1FF;
+                color: #000;
+                padding: 36px;
+                text-decoration: none;
+                font-size: xx-large;
+                border-radius: 10px;
+                font-family: "Arial Black", Gadget, sans-serif;
+            }
         nav#nav1 > a:hover{ background: #BBEA00; }
         nav#nav1 > a:active{ background: #EEFFA8; }
     </style>
     <script>
         var hate = new Audio();
         var idiot = new Audio();
+        var along = new Audio();
+        var scream = new Audio();
+        var pioneer = new Audio();
 
         hate.src = "I HATE YOU.mp3";
         idiot.src = "LEAVE ME ALONE YOU IDIOT.mp3";
+        along.src = "I REFUSE to go along with this.mp3"
+        scream.src = "Scream.mp3"
+        pioneer.src = "IM A PIONEER.mp3"
     </script>
 </head>
 <body>
-<nav id="nav1">
-    <a href="#" onmousedown="hate.play()">"I HATE YOU"</a>
-    <a href="#" onmousedown="idiot.play()">You Idiot</a>
-</nav>
+    <nav id="nav1">
+        <a href="#" onmousedown="hate.play()">"I HATE YOU"</a>
+        <a href="#" onmousedown="idiot.play()">"You Idiot"</a>
+        <a href="#" onmousedown="along.play()">"I refuse to go along"</a>
+        <a href="#" onmousedown="scream.play()">UUAAARRRUUUAAGGHH</a>
+        <a href="#" onmousedown="pioneer.play()">I'M A PIONEER!</a>
+    </nav>
 </body>
 </html>

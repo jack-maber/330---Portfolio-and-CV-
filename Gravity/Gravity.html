@@ -1,4 +1,4 @@
-<html lang=en>
+﻿<html lang=en>
 <head>
     <meta charset=utf-8>
     <title>Gravity Demo</title>
@@ -27,7 +27,7 @@
     //Sets up demo
     function init(){
        setupCanvas();
-      vy = (Math.random() * -15) + -5; //Sets the Y velocity randomly for more interesting results
+      vy = (Math.random() * -15); //Sets the Y velocity randomly for more interesting results
         ball = {x:canvas.width / 2, y:100, radius:20, status: 0,   color:"red"};
 
     }
@@ -35,9 +35,9 @@
     function draw() {
         ctx.clearRect(0,0,canvas.width, canvas.height);
         //Creates Title at the top of the screen
-	       ctx.fillStyle = "blue";
-           ctx.font = "20px Arial";
-           ctx.fillText(message, 500,20);
+	       ctx.fillStyle = "black";
+           ctx.font = "30px Arial";
+           ctx.fillText(message, 850,40);
 
              //Draw ball
             ctx.beginPath();
@@ -52,7 +52,8 @@
     setInterval(draw, 1000/60);
 
     //Takes care of all of the ball movement
-    function ballMovement(){
+    function ballMovement()
+    {
         ball.x += vx;
         ball.y += vy;
         vy += gravity;
@@ -74,13 +75,13 @@
             //do this otherwise ball never stops on xaxis
              if(Math.abs(vx)<1.1)
                  vx=0;
+                 xF();
 
-             xF();
+        }
+
 
     }
 
-
-    }
     //Sets friction for the ball
     function xF(){
              if(vx>0)
@@ -89,13 +90,14 @@
                  vx = vx + xFriction;
     }
 
+
     //Sets up all of the canvas elements
     function setupCanvas(){
-	container = document.createElement( 'div' );
+	container = document.createElement('div');
 	container.className = "container";
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
-	document.body.appendChild( container );
+	document.body.appendChild(container);
 	container.appendChild(canvas);
     }
 
