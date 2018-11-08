@@ -31,7 +31,7 @@ var render = function () {
 
   // Start text
   if (!isGameStarted) {
-    ctx.fillText("Hit That Space Bar Yo", 200, canvas.height / 2);
+    ctx.fillText("Hit Space to serve!", 200, canvas.height / 2);
   }
 
 };

@@ -1,4 +1,4 @@
-// Extending the Context to add a clear() function
+// Saves locations of the canvas, and then clears it
 CanvasRenderingContext2D.prototype.clear =
   CanvasRenderingContext2D.prototype.clear || function (preserveTransform) {
     if (preserveTransform) {

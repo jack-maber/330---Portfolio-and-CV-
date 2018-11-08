@@ -54,7 +54,7 @@ function game() {
     ctx.fillRect(AppleX*GridSize,AppleY*GridSize,GridSize-2,GridSize-2);
 
     //Creates the snake
-    ctx.fillStyle="white";
+    ctx.fillStyle="lime";
     for(var i=0; i<Trail.length; i++) {
         ctx.fillRect(Trail[i].x*GridSize,Trail[i].y*GridSize,GridSize-2,GridSize-2);
         //Resets the length if the player makes contact with themselves
